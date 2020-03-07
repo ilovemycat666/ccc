@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+  <form action='/' method="POST">
+    <h4 class="card-title pt-4"><center>Cate Critico's Critter Co.</center></h4>
+      <div class="row mt-4 ml-0">
+        <h5 class="card-title my-4">Hello, {{ user }}!</h5>
+      </div>
+      <div class="row ">
+        <div class="col-md-6">
+          <label> What can I do? </label>
+          <select class="custom-select" id="dog" name="job">
+            <option selected>Choose...</option>
+            <option value="walk">Walk</option>
+            <option value="sit">Sit</option>
+            <option value="drop">Drop-In</option>
+          </select>
+        </div>
+      </div>
+      <div class="row pt-2">
+          <div class="col-md-6">
+            <label>Notes</label>
+            <textarea name="notes" class="form-control form-control-sm" placeholder="Something I should know?" rows="3"></textarea>
+          </div>
+      </div>
+      <input name="username" value= "{{ Username }}" type="hidden" class="form-control form-control-sm" placeholder="Username" rows="3">
+      <div class="row  mt-3 ">
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+  </form>
+</div>
+
+
+{% endblock %}
+

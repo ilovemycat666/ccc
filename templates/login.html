@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+  <form action='/login' method="POST">
+    <h5 class="card-title mt-4">Welcome Back</h5>
+    <div class="row">
+      <div class="col-md-4">
+        <label>Username</label>
+        <input name="username" type="username" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+      </div>
+    </div>
+    <div class="row pt-2">
+      <div class="col-md-4">
+        <label>Password</label>
+        <input name="password" type="password" class="form-control form-control-sm" placeholder="Password">
+      </div>
+    </div>
+    <div class="row  mt-3 ">
+      <div class="col">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    <div class="col">
+      <p><small>First time here? Get<a href="{{ url_for('register') }}"> Registered!</a></<small></p>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+

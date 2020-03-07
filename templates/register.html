@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<center>
+<div class="container">
+  <form action="/register" method="POST">
+      <h5 class="card-title mt-4">Sign Up!</h5>
+      <div class="row">
+        <div class="col-md-4">
+          <label>First Name</label>
+          <input name="name1" type="text" class="form-control form-control-sm" placeholder="First Name">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-4">
+          <label>Username</label>
+          <input name="username" type="username" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-4">
+          <label>Last Name</label>
+          <input name="name2" type="text" class="form-control form-control-sm" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-4">
+          <label>Password</label>
+          <input name="password" type="password" class="form-control form-control-sm" placeholder="Password">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-4">
+          <label>Email Address</label>
+          <input name="email" type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-4">
+          <label>Confirm Password</label>
+          <input name="confirm" type="password" class="form-control form-control-sm" placeholder="Confirm Password">
+        </div>
+      </div>
+      <div class="row pt-2">
+        <div class="col-md-4">
+          <label>Phone Number</label>
+          <input name="phone" type="tel" class="form-control form-control-sm" placeholder="Phone Number">
+        </div>
+      </div>
+
+    <div class="row  mt-3 ">
+      <div class="col">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+</center>
+
+{% endblock %}
+

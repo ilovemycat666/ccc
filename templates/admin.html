@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="container">
+  <div class="card card-body pt-2 mt-2" style="background-color:WhiteSmoke">
+    <h5 class="card-title">Query Database</h5>
+<!---------The first row ------------->
+    <form action="/administrator" method="POST">
+      <div class="row my-2 mx-1">
+        <div class="col-md-3">
+          <input name="userinfo" type="text" class="form-control form-control-sm" placeholder="Search Here">
+        </div>
+        <div class="col mx-2">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!------lets make this work------->
+<!---
+<style>
+      table, th, td {
+      padding: 10px;
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+    </style> --->
+
+<div class="container">
+  <div class='row'>
+    <h3 class="card-title mt-4"> Your search results for: <b> {{ userinfo }}</b> </h3>
+  </div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">Lastname</th>
+      <th scope="col">Phone#</th>
+      <th scope="col">email</th>
+      <th scope="col">username</th>
+      <th scope="col">Notes</th>
+      <th scope="col">Job</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tuple in query: %}
+    <tr>
+      {% for item in tuple: %}
+          <td>{{ item }}</td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% endblock %}
+
